@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawusia u Szefusia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #3c2f2f; 
+            background-color: #f9f5f1; 
+        }
+
+        header {
+            background-color: #6e4e37;
+            color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f9f5f1;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a.active, nav ul li a:hover {
+            background-color: #a67c52;
+            color: #fff;
+        }
+
+        main {
+            padding: 2rem 10%;
+        }
+
+        h1, h2 {
+            color: #6e4e37;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            display: none;
+        }
+
+        .active-section {
+            display: block;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            border: 2px solid #a67c52;
+        }
+
+        .team-member h4 {
+            font-size: 1.2rem;
+            color: #6e4e37;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        ul li h4 {
+            font-size: 1.3rem;
+            color: #6e4e37;
+            text-decoration: underline;
+        }
+
+        ul li ul li {
+            margin-left: 1rem;
+            color: #3c2f2f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #6e4e37;
+            color: #f9f5f1;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Szefus wita!</a></li>
+                <li><a href="#onas" class="nav-link">O nas.</a></li>
+                <li><a href="#oferta" class="nav-link">Nasza oferta produktow.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active-section">
+            <h1>Kawusia u Szefusia</h1>
+            <h2>Czas na TWOJA kawe!</h2>
+            <img src="kawa.jpg" alt="Kawa">
+        </section>
+
+        <section id="onas" class="hidden-section">
+            <h2>O nas!</h2>
+            <p>Ludziska.</p>
+            <h2>Nasi ludzie:</h2>
+            <div class="team-member">
+                <img src="1.jpg" alt="1">
+                <h4>IMIE PLACEHOLDER</h4>
+                <p>OPISOPIS.</p>
+            </div>
+        </section>
+
+        <section id="oferta" class="hidden-section">
+            <h2>Nasza szeroka oferta produktow:</h2>
+            <ul>
+                <li>
+                    <h4>x</h4>
+                    <ul>
+                        <li>x</li>
+                        <li>x</li>
+                        <li>x</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>x</h4>
+                    <ul>
+                        <li>x</li>
+                        <li>x</li>
+                        <li>x</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>x</h4>
+                    <ul>
+                        <li>x</li>
+                        <li>x</li>
+                        <li>x</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Szefix Sp. Z O.O</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(link => link.classList.remove('active'));
+                link.classList.add('active');
+
+                sections.forEach(section => {
+                    if (section.id === link.getAttribute('href').substring(1)) {
+                        section.classList.remove('hidden-section');
+                        section.classList.add('active-section');
+                    } else {
+                        section.classList.remove('active-section');
+                        section.classList.add('hidden-section');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -15,7 +15,8 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #3c2f2f; 
-            background-color: #f9f5f1; 
+            background-color: #f9f5f1;
+            text-align: center; /* Center text globally */
         }
 
         header {
@@ -23,12 +24,14 @@
             color: #fff;
             padding: 1rem 2rem;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
+            padding: 0;
         }
 
         nav ul li {
@@ -80,25 +83,7 @@
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .team-member {
-            display: flex;
-            align-items: center;
-            margin-top: 1.5rem;
-        }
-
-        .team-member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 1rem;
-            border: 2px solid #a67c52;
-        }
-
-        .team-member h4 {
-            font-size: 1.2rem;
-            color: #6e4e37;
+            margin: 1rem auto;
         }
 
         ul {
@@ -116,12 +101,14 @@
             text-decoration: underline;
         }
 
-        ul li ul li {
-            margin-left: 1rem;
-            color: #3c2f2f;
+        ul li img {
+            width: 200px;
+            height: auto;
+            margin: 0.5rem;
+            border: 2px solid #a67c52;
+            border-radius: 5px;
         }
 
-        /* Footer */
         footer {
             background-color: #6e4e37;
             color: #f9f5f1;
@@ -140,6 +127,7 @@
                 <li><a href="#home" class="nav-link active">Szefus wita!</a></li>
                 <li><a href="#onas" class="nav-link">O nas.</a></li>
                 <li><a href="#oferta" class="nav-link">Nasza oferta produktow.</a></li>
+                <li><a href="#skad" class="nav-link">Skad bierzemy zasoby?</a></li>
             </ul>
         </nav>
     </header>
@@ -163,33 +151,108 @@
         </section>
 
         <section id="oferta" class="hidden-section">
-            <h2>Nasza szeroka oferta produktow:</h2>
+            <h2>Nasza szeroka oferta produktów:</h2>
+            <h3>KAWY:</h3>
             <ul>
                 <li>
-                    <h4>x</h4>
-                    <ul>
-                        <li>x</li>
-                        <li>x</li>
-                        <li>x</li>
-                    </ul>
+                    <h4>Expresso</h4>
+                    <img src="espresso.jpg" alt="Espresso">
+                    <p>Mocna, aromatyczna kawa w małej porcji.</p>
+                    <p><strong>Cena: 12 zł</strong></p>
                 </li>
                 <li>
-                    <h4>x</h4>
-                    <ul>
-                        <li>x</li>
-                        <li>x</li>
-                        <li>x</li>
-                    </ul>
+                    <h4>Latte</h4>
+                    <img src="latte.jpg" alt="Latte">
+                    <p>Delikatna kawa z mleczną pianką.</p>
+                    <p><strong>Cena: 18 zł</strong></p>
                 </li>
                 <li>
-                    <h4>x</h4>
-                    <ul>
-                        <li>x</li>
-                        <li>x</li>
-                        <li>x</li>
-                    </ul>
+                    <h4>Cappuccino</h4>
+                    <img src="cappuccino.jpg" alt="Cappuccino">
+                    <p>Idealna mieszanka kawy, mleka i piany.</p>
+                    <p><strong>Cena: 15 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Americano</h4>
+                    <p><strong>Cena: 18 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Biała</h4>
+                    <p><strong>Cena: 17 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Czarna</h4>
+                    <p><strong>Cena: 17 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Kawa Szefa</h4>
+                    <p>Biała o smaku chorzowskiego marcepanu</p>
+                    <p><strong>Cena: 25 zł</strong></p>
                 </li>
             </ul>
+            <h3>CIASTKA:</h3>
+            <ul>
+                <li>
+                    <h4>Maślane</h4>
+                    <p><strong>Cena: 12 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Czekoladowe</h4>
+                    <p><strong>Cena: 12 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Karmelowe</h4>
+                    <p><strong>Cena: 12 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Croissant</h4>
+                    <p><strong>Cena: 14 zł</strong></p>
+                </li>
+            </ul>
+            <h3>CIEPŁE NAPOJE:</h3>
+            <ul>
+                <li>
+                    <h4>Herbata czarna</h4>
+                    <p><strong>Cena: 14 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Herbata zimowa</h4>
+                    <p><strong>Cena: 20 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Gorąca czekolada</h4>
+                    <p><strong>Cena: 18 zł</strong></p>
+                </li>
+            </ul>
+            <h3>DODATKI:</h3>
+            <ul>
+                <li>
+                    <h4>Karmel</h4>
+                    <p><strong>Cena: 4 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Posypka czekoladowa</h4>
+                    <p><strong>Cena: 4 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Bita śmietana</h4>
+                    <p><strong>Cena: 4 zł</strong></p>
+                </li>
+                <li>
+                    <h4>Pianki</h4>
+                    <p><strong>Cena: 5 zł</strong></p>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="skad" class="hidden-section">
+            <h2>Skad bierzemy nasze zasoby?</h2>
+            <p>Nasze produkty powstaja tylko z najlepszych zrodel w calej Polsce!</p>
+            <h2>Nasze zrodla:</h2>
+            <div class="skad">
+                <img src="1.jpg" alt="1">
+                <h4>ZRODLO</h4>
+                <p>OPISOPIS.</p>
         </section>
     </main>
 

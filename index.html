@@ -123,7 +123,21 @@
             background-color: #f2f2f2;
             border-radius: 5px;
         }
-        
+
+        .source-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .source-item {
+            flex: 1 1 30%; /* Adjust flex-basis as needed */
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         footer {
             background-color: #6e4e37;
             color: #f9f5f1;
@@ -324,44 +338,47 @@
         <section id="skad" class="hidden-section">
             <h2>Skąd bierzemy nasze zasoby?</h2>
             <p>Nasze produkty powstają tylko z najlepszych źródeł w całej Polsce!</p>
+          
             <h2>Nasze źródła:</h2>
-            <div class="skad">
+            <div class="source-list">
+              <div class="source-item">
                 <h4>Cukier</h4>
-                <p>https://whurcie.eu/cukier-polski-25kg-paleta-500kg, 1,512.00 zł.</p>
-            </div>
-            <div class="skad">
+                <a href="https://whurcie.eu/cukier-polski-25kg-paleta-500kg, 1,512.00 zł." target="_blank">Whurcie</a>
+              </div>
+              <div class="source-item">
                 <h4>Kawa</h4>
-                <p>https://hurtownia-spozywcza.pl/manufacturer/lavazza/lavazza-qualita-oro-perfect-symphony-palone-ziarna-kawy-1000-g.html, 419.40 zł.</p>
-            </div>
-            <div class="skad">
+                <a href="https://hurtownia-spozywcza.pl/manufacturer/lavazza/lavazza-qualita-oro-perfect-symphony-palone-ziarna-kawy-1000-g.html" target="_blank">Hurtownia Spożywcza</a>
+              </div>
+              <div class="source-item">
                 <h4>Mleko</h4>
-                <p>https://hurtownia-spozywcza.pl/polmlek-mleko-uchate-uht-2-0-1-l-paleta.html, 2,358.72 zł.</p>
-            </div>
-            <div class="skad">
+                <a href="https://hurtownia-spozywcza.pl/polmlek-mleko-uchate-uht-2-0-1-l-paleta.html" target="_blank">Hurtownia Spożywcza</a>
+              </div>
+              <div class="source-item">
                 <h4>Mąka</h4>
-                <p>https://whurcie.eu/maka-pszenna-typ-450-900kg-hurtownia-mak, 1,748.25 zł.</p>
-            </div>
-            <div class="skad">
+                <a href="https://whurcie.eu/maka-pszenna-typ-450-900kg-hurtownia-mak, 1,748.25 zł." target="_blank">Whurcie</a>
+              </div>
+              <div class="source-item">
                 <h4>Czekolada</h4>
-                <p>https://www.cukieteria.pl/polewy-czekoladowe/7591-10kg-fat-based-coating-drops-milk-drobne-dropsy-z-mlecznej-czekolady-polewa-niewymagajaca-temperowania-dawn.html, 450.00 zł.</p>
-            </div>
-            <div class="skad">
+                <a href="https://www.cukieteria.pl/polewy-czekoladowe/7591-10kg-fat-based-coating-drops-milk-drobne-dropsy-z-mlecznej-czekolady-polewa-niewymagajaca-temperowania-dawn.html" target="_blank">Cukieteria</a>
+              </div>
+              <div class="source-item">
                 <h4>Herbata</h4>
                 <p>Rośnie na zapleczu</p>
-            </div>
-            <div class="skad">
+              </div>
+              <div class="source-item">
                 <h4>Karmel</h4>
                 <p>Wytwarzamy na miejscu z nadmiaru cukru</p>
-            </div>
-            <div class="skad">
+              </div>
+              <div class="source-item">
                 <h4>Jaja</h4>
                 <p>Od babci ze wsi</p>
-            </div>
-            <div class="skad">
+              </div>
+              <div class="source-item">
                 <h4>Reszta produktów</h4>
                 <p>Kupujemy z Lidla</p>
+              </div>
             </div>
-        </section> 
+          </section>
         <section id="pliki" class="hidden-section">
             <h2>Pliki</h2>
             <div class="file-list">
